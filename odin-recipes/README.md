@@ -2,6 +2,8 @@
 
 Welcome to the HTML Basics Recipes Page Project! This project is designed to help you grasp the fundamental concepts of HTML by creating a simple recipes page. Through the use of various HTML tags and attributes, you will learn how to structure a basic web page and enhance its content. This project was created with the help of <a href="https://www.theodinproject.com">TheOdinProject</a>.
 
+<b>Live Link:</b> <a href="https://thedividedorange.github.io/TheOdinProject/odin-recipes/">https://thedividedorange.github.io/TheOdinProject/odin-recipes/</a>
+
 ## Getting Started
 
 To get started with this project, follow these steps:
