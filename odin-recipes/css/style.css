@@ -1,37 +1,69 @@
-body {
-    background-color: lightblue;
-    font-size:16px;
+* {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.8rem;
 }
+
+body {
+    background-color: rgb(199, 197, 195);
+    margin: 0 18px 0 18px;
+}
+
+.container {
+    display:block;
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
 h1 {
-    font-size: 32px;
-    text-align: center;
-    font-weight: 650;
+    font-size:36px;
+    font-weight:bold;
+    text-shadow: 2px 2px #752929;
+    
 }
 h2 {
-    font-size: 28px;
-    font-weight: 550px;
+    font-size:28px;
+    font-weight:bold;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-shadow: 1px 3px #752929;
 }
-h3 {
-    font-size: 26px;
-    font-weight: 550px;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+
+img {
+    border-style: ridge;
+    border-width: 14.8px;
+    border-color: #752929;
+    text-align: center;
     align-items: center;
-    justify-content: center;
 }
-.container-method {
-    display: flex;
-    justify-content: center;
-    padding: 18px;
-    margin-left: 25px;
-    margin-right: 25px;
-    white-space: break-spaces;
-}
-.liststyle {
+
+.main {
     display: flex;
     flex-direction: column;
-    overflow-wrap: break-word;
+    align-items: center;
+}
+
+list#homemenu {
+    box-sizing: border-box;
+    border-style: ridge;
+    margin-top: 22px;
+    border-color: #752929;
+    box-shadow: 2px 9px #752929;
+    padding-right: 14px;
+    min-width: 468px;
+}
+
+#homemenu ul {
+    list-style-type:square;
+}
+
+#homemenu ul li {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#homemenu ul li a {
+    color:#752929
+}
+
+.container-method {
+    padding: 0 100px 0 100px;
 }
