@@ -1,7 +1,6 @@
 * {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.8rem;
-
 }
 
 body {
@@ -49,7 +48,6 @@ img {
 }
 
 list#homemenu {
-    box-sizing: border-box;
     border-style: ridge;
     margin-top: 22px;
     border-color: #752929;
