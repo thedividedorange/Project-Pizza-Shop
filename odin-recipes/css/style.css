@@ -1,12 +1,19 @@
 * {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 1.8rem;
+    line-height: 1.8em;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     background-color: rgb(199, 197, 195);
     margin: 0px 18px;
+    font-size: 1.6rem;
 }
+
+
 
 .container {
     display:block;
@@ -15,7 +22,8 @@ body {
 }
 
 h1 {
-    font-size:36px;
+    display: block;
+    font-size:3.6rem;
     font-weight:bold;
     text-shadow: 2px 2px #752929;
     animation: glow 3s infinite alternate;  
@@ -26,7 +34,7 @@ h1 {
     to   {color:blue;}
 }
 h2 {
-    font-size:28px;
+    font-size:2.8rem;
     font-weight:bold;
     text-decoration: underline;
     text-decoration-style: wavy;
@@ -49,6 +57,8 @@ img {
 
 list#homemenu {
     border-style: ridge;
+    border-radius: 8px;
+    border-width: 0.4em;
     margin-top: 22px;
     border-color: #752929;
     box-shadow: 2px 9px #752929;
@@ -70,4 +80,9 @@ list#homemenu {
 
 .container-method {
     padding: 0 100px 0 100px;
+    display: block;
+    border: 1.4px dashed #752929;
+    border-width: 0.4em;
 }
+
+
