@@ -16,10 +16,10 @@
 // }
 
 
-/*-------------*/
+/*--------------------------*/
 /* For loop*/
 /* Iterating through a array*/
-/*-------------*/
+/*---------------------------*/
 
 // let array1 = ["dog", "cat", "rabbit"]
 
@@ -87,23 +87,23 @@
 // }
 
 
-/*-------------*/
+/*-------------------*/
 /* Iterating Objects*/
-/*-------------*/
+/*------------------*/
 
-const userInfo = {
-    Name : "Leonardd",
-    age : 15,
-    sex : "Male",
-    place : "Jaipur"
-};
+// const userInfo = {
+//     Name : "Leonardd",
+//     age : 15,
+//     sex : "Male",
+//     place : "Jaipur"
+// };
 
 
-for(let details in userInfo){
+// for(let details in userInfo){
 
-    console.log(`The ${details} of the person is ${userInfo[details]}`);
-    details++
-}
+//     console.log(`The ${details} of the person is ${userInfo[details]}`);
+//     details++
+// }
 
-console.log(Object.keys(userInfo)) 
-console.log(Object.values(userInfo))
+// console.log(Object.keys(userInfo)) 
+// console.log(Object.values(userInfo))

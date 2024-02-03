@@ -45,20 +45,20 @@
 // console.log(join)
 
 
-/*-----------------*/
+/*----------------------*/
 /* Array includes*/
 /* Returns true or false*/
-/*-----------------*/
+/*----------------------*/
 
 // let array1 = ['hello', 'world']
 
 // console.log(array1.includes('world'))
 
 
-/*-----------------*/
+/*-------------------------------------*/
 /* Array indexOf*/
 /* Returns position of element in array*/
-/*-----------------*/
+/*-------------------------------------*/
 
 // let array1 = ['hello', 'world']
 
@@ -75,16 +75,16 @@
 // console.log(array1.reverse())
 
 
-/*-----------------*/
+/*-----------------------------*/
 /* Array slice nd splice*/
 /* get range of data from array*/
-/*-----------------*/
+/*-----------------------------*/
 
 // let array1 = ['hello', 'world', 'whatsup', 'hi', 'no']
 
 // console.log(array1.slice(1,3))
 
-// //Splice - remoe / add in between array
+// //Splice - remove / add in between array
 // let colors1 = array1.splice(1,3) //remove some part from array
 // console.log(array1)
 // console.log(colors1)
@@ -103,8 +103,9 @@
 
 // console.log(nums)
 
-
+// /*----------------------*/
 /* Multi Dimensional Arrays*/
+// /*----------------------*/
 
 // let game = [['rock', 'rock'], ['rock', 'paper'], ['rock', 'scissors'],
 //            ['paper', 'rock'], ['paper', 'paper'], ['paper', 'scissors'],
