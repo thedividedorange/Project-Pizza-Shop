@@ -183,6 +183,6 @@
 
 // try {
 // hello.world()
-// } catch {
+// } catch (e) {
 //     console.log("error")
 // }
