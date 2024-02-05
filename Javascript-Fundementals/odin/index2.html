@@ -10,6 +10,7 @@
     <body>
 
 <!-- Print Name -->
+
         <!-- <button id="Pressme">Press me</button>
         <div id="pressmejs"></div>
      
@@ -26,6 +27,7 @@
         </script> -->
 
 <!-- Convert text box to output -->
+
         <!-- <input type="text" id="name"></input>
         <input type="text" id="lastname"></input>
         <button id="getname">Get name</button>
@@ -42,9 +44,16 @@
                 
             }
                 getname.addEventListener("click", getfullname);
+                getname.addEventListener("click", () => {
+                    const fname = document.getElementById("name").value;
+                    const lname = document.getElementById("lastname").value;
+                    const fullname = document.querySelector("#fullname");
+                    fullname.textContent = `Your name is ${fname} ${lname}.`; 
+                })
         </script> -->
 
 <!-- convert number to string -->
+
         <!-- <script>
             const myString = "123";
             const myNum = Number(myString);
@@ -53,6 +62,7 @@
         </script> -->
 
 <!-- convert string to name -->
+
         <!-- <script>
              const myNum2 = 123;
             const myString2 = String(myNum2);
@@ -61,13 +71,15 @@
         </script> -->
 
 <!-- Lenght of text -->
+
         <!-- <script>
             var name = "leonard";
             var Length = name.length;
             console.log(Length);
         </script> -->
 
-<!-- Charat , return position of index        -->
+<!-- Charat , return position of index   -->
+
         <!-- <script>
         var name= "leonard";    
         let position = name.charAt(0);
@@ -76,6 +88,7 @@
         </script> -->
 
 <!--charcodeat return utf16 code-->
+
     <!-- <p id="output"></p>
         <script>
             var name = "leonard";
@@ -83,6 +96,7 @@
         </script> -->
 
 <!-- return letter of position with at() -->
+
         <!-- <p id="name"></p>
         <P id="name1"></P>
         <script>
@@ -92,6 +106,7 @@
         </script> -->
 
  <!-- Extract parts of string-->
+
         <!-- <p id="extract"></p>
         
         <script>
@@ -101,6 +116,7 @@
         </script> -->
 
 <!--Convert to upper case or lowercase-->
+
         <!-- <p id="uppercase"></p>
         <p id="lowercase"></p>
 
@@ -114,6 +130,7 @@
         </script> -->
 
 <!--concat-->
+
         <!-- <p id="output"></p>
 
         <script type="text/javascript">
@@ -124,6 +141,7 @@
         </script> -->
     
 <!--remove whitespace-->
+
         <!-- <p id="name"></p>
 
         <script type="text/javascript">

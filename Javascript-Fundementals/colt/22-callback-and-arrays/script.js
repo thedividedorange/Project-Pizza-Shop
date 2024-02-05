@@ -1,6 +1,6 @@
-/*****************************************/
+/***************************************************************************************/
 /*forEach , alternate to for xxx in array - does not retun new array - just for iterating
-/*****************************************/
+/***************************************************************************************/
 
 // const array = ["hello", "david", "sam", "justin"]
 
@@ -93,9 +93,9 @@
 // name1();
 
 
-/******************* */
+/************************** */
 /* Arrow function with forEach
-/******************* */
+/************************** */
 
 // const array = ["hello", "david", "sam", "justin"]
 
@@ -114,9 +114,9 @@
 // })
 
 
-/******************* */
+/********************** */
 /* Arrow function with map
-/******************* */
+/********************** */
 
 // const dataSet = [
 //     {name: "bob",
@@ -170,7 +170,8 @@
 
 
 /*****************************************************************************/
-/*FILTER - Callback function that filters an array after checking a condition - Returns a new array with values*/
+/*FILTER - Callback function that filters an array after checking a condition - 
+  Returns a new array with values*/
 /*************************************************************************** */
 
 // const numberSet = [1,2,3,4,5,6,7,8,9,10];
@@ -232,14 +233,15 @@
 
 // console.log(someAge)
 
+/********************************** */
 /* REDUCE - Reduce to a single value*/
+/********************************** */
 
-const array = [1,2,3,4,5,6]
+// const array = [1,2,3,4,5,6]
 
-const num = array.reduce((total, price) =>{
-    return total + price;
-})
+// const num = array.reduce((total, price) =>{
+//     return total + price;
+// })
 
-console.log(num)
+// console.log(num)
 
-  
