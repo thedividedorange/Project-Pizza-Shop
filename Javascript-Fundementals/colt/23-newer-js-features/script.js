@@ -43,10 +43,16 @@ console.log(sum(1,2,3,4,5,6))
 
 /********************/
 /*Destructing arrays*/
-/****************** */
+// /****************** */
 
-const scores = [982, 72873, 8799 , 973989, 8939938]
+// const scores = [982, 72873, 8799 , 973989, 8939938]
 
-const [lowScore, mediumScore] = scores;
+// const [lowScore, mediumScore] = scores;
 
-console.log(lowScore, mediumScore)
+// console.log(lowScore, mediumScore)
+
+function lastLetter(name){
+  return name[name.length-1]
+}
+
+console.log(lastLetter("leonard"))

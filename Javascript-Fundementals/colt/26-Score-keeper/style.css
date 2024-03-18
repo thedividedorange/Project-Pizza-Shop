@@ -1,0 +1,19 @@
+html {
+    height: 100%;
+    width: 100%;
+    }
+
+.winner {
+    color:green;
+    }
+
+.looser {
+    color:red;
+    }
+    
+.disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+    color: #c0c0c0;
+    background-color: #ffffff;
+    }

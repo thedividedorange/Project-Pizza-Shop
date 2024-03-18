@@ -1,0 +1,40 @@
+<!DOCTYPE Html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" width="device-width, initial-scale=1.0">
+        <script src="js-file.js" defer></script>
+        <title>
+            JS Foundations - arrays and loops
+        </title>
+    </head>
+    <body>
+        <div id="container">
+        <h1>Welcome</h1>
+    </div>
+
+    <script type="text/javascript">
+        const container = document.getElementById("container")
+        const p = document.createElement("p")
+        const h3 = document.createElement("h3")
+        const div = document.createElement("div")
+        const divHeader = document.createElement("h1")
+        const divP = document.createElement("p")
+
+        p.textContent = "Hey ! i am red!"
+        p.style.color = "red"
+
+        h3.innerText = "I am a blue h3"
+        h3.style.color = "blue"
+
+        div.setAttribute("style", "border: 1px solid black;background-color:pink;")
+        divHeader.style.cssText = "color:green;"
+        divHeader.textContent = "Im in a div"
+        divP.innerText = "Me too!!"
+        
+        div.append(divHeader, divP)
+        container.append(p, h3)
+        container.appendChild(div)
+    </script>
+    </body>    
+</html>
