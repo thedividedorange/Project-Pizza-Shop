@@ -1,0 +1,165 @@
+<!DOCTYPE Html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" width="device-width, initial-scale=1.0">
+        <title>
+            JS Foundations - objects
+        </title>
+    </head>
+    <body>
+        <div id="container">
+        <h1>Welcome</h1>
+    </div>
+
+    <script type="text/javascript">
+
+        // Capitilise first letter
+
+        function camelize(string){
+            return string.split("-")
+                .map((string, index) => index !== 0 ? string.charAt(0).toUpperCase() + string.slice(1) : string)
+                .join("")
+        }
+        console.log(camelize("background-color"))
+
+
+        // Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values 
+        // higher or equal to a and lower or equal to b and return a result as an array.
+        // The function should not modify the array. It should return the new array.
+
+        let arr = [5, 3, 8, 1]; 
+        function filterRange(arr, a, b){
+            return arr.filter((currentValue) => currentValue >= a && currentValue <= b)
+        }  
+        console.log(filterRange(arr,1,4))
+
+
+        //Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all 
+        //values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
+        //The function should only modify the array. It should not return anything.
+
+        let arry = [5, 3, 8, 1];
+
+        function filterRangeInPlace(arry, a, b){
+            arry.slice().reverse().forEach((currentValue, index, arr) => 
+                !(currentValue >= a && currentValue <= b) ? arry.splice(arr.length - 1 - index,1) : 0
+            )   
+        }
+
+        filterRangeInPlace(arry, 1, 5)
+        console.log(arry)
+
+        //Sort in decreasing order, modify original array
+
+        let arr3 = [5, 2, 1, -10, 8];
+
+        const sortInDescending = (array) =>  array.sort().reverse()
+        console.log(sortInDescending(arr3))
+   
+        //Copy and sort array
+        //We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
+        //Create a function copySorted(arr) that returns such a copy.
+
+        let arr4 = ["HTML", "JavaScript", "CSS"];
+
+        const copySorted = (array) => array.slice().sort()
+
+        console.log(`old array ${arr4}`)
+        console.log(`New array: ${copySorted(arr4)}`)
+
+        //Map to names
+        //You have an array of user objects, each one has user.name. Write the code that converts it into an array of names.
+
+        let users = [
+            { name: "John", age: 25 },
+            { name: "Pete", age: 30 },
+            { name: "Mary", age: 28 },
+        ]
+
+        let names = users.reduce((total, currentValue) => {
+            if (currentValue.name !== undefined) {
+                total.push(currentValue.name)
+            }
+            return total
+        },[])
+        
+        console.log(names)
+
+        //Map to objects
+        //You have an array of user objects, each one has name, surname and id.
+        //Write the code to create another array from it, of objects with id and fullName, where fullName is generated from name and surname.
+
+        let john = { name: "John", surname: "Smith", id: 1 };
+        let pete = { name: "Pete", surname: "Hunt", id: 2 };
+        let mary = { name: "Mary", surname: "Key", id: 3 };
+
+        let users1 = [ john, pete, mary ];
+
+        let usersMapped = users1.map((currentValue) => {
+            let fullName = `${currentValue.name} ${currentValue.surname}`
+            let id = currentValue.id
+            return {fullName, id}    
+        })
+
+        console.log(usersMapped)
+
+        //Sort users by age
+        //Write the function sortByAge(users) that gets an array of objects with the age property and sorts them by age.
+
+        let johns = { name: "John", age: 25 };
+        let petes = { name: "Pete", age: 30 };
+        let marys = { name: "Mary", age: 28 };
+        let spongebob = { name: "SpongeBob", age: -13};
+
+        let arr5 = [ petes, johns, marys, spongebob ];
+
+        const sortByAge = (users) => users.sort((a,b) => a.age <= b.age ? -1 : 1)
+
+        console.log(sortByAge(arr5))
+
+        //Write the function shuffle(array) that shuffles (randomly reorders) elements of the array.
+        //Multiple runs of shuffle may lead to different orders of elements. For instance:
+        //Use fisher Yates shuffle
+
+        //Average Age
+
+        let john2 = { name: "john", age: 25};
+        let pete2 = { name: "pete", age: 30};
+        let mary2 = { name: "mary", age: 29};
+        
+        let arr6 = [john2, pete2, mary2];
+
+        function getAverageAge(arry){
+         return arry.reduce((total,currentValue) => total +  currentValue.age,0)/arry.length
+        }
+        console.log(getAverageAge(arr6))
+
+        //Filter unique array items
+
+        let strings = ['hare', 'krishna', 'hare', 'krishna', 'krishna', 'krishna', 'hare', 'hare', ":-O"];
+
+        function filter(arr){
+            return arr.reduce((newArray, currentValue) => 
+            !newArray.includes(currentValue) ? (newArray.push(currentValue), newArray):newArray,[])
+        }
+
+        console.log(filter(strings))
+
+        //create keyed objects from array
+        //Let’s say we received an array of users in the form {id:..., name:..., age:... }.
+        //Create a function groupById(arr) that creates an object from it, with id as the key, and array items as values.
+
+        let users8 = [
+                {id: 'john', name: "John Smith", age: 20},
+                {id: 'ann', name: "Ann Smith", age: 24},
+                {id: 'pete', name: "Pete Peterson", age: 31},
+            ];
+
+        const groupById = (arr) => arr.reduce((obj, currentValue) => (obj[currentValue.id] = currentValue,obj),{})
+
+        let usersById = groupById(users8);
+        console.log(usersById)
+    </script>
+    </body>    
+</html>
