@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" width="device-width initial-scale=1.0">
+        
+        <title>Welcome To Javascript Basics</title>
+    </head>
+
+    <body>
+
+<!-- Print Name -->
+
+        <!-- <button id="Pressme">Press me</button>
+        <div id="pressmejs"></div>
+     
+        <script type="text/Javascript">
+            const button = document.querySelector("#Pressme");
+
+            function greet() {
+                const name = prompt("What is your name?");
+                const pressme = document.querySelector("#pressmejs");
+                pressme.textContent = `Hello ${name}, nice to see you!`;
+            }
+
+            button.addEventListener("click", greet);
+        </script> -->
+
+<!-- Convert text box to output -->
+
+        <!-- <input type="text" id="name"></input>
+        <input type="text" id="lastname"></input>
+        <button id="getname">Get name</button>
+        <div id="fullname"></div>
+
+        <script type="text/javascript">
+                const getname = document.querySelector("#getname");
+
+            function getfullname(){
+                const fname = document.getElementById("name").value;
+                const lname = document.getElementById("lastname").value;
+                const fullname = document.querySelector("#fullname");
+                fullname.textContent = `Your name is ${fname} ${lname}.`; 
+                
+            }
+                getname.addEventListener("click", getfullname);
+                getname.addEventListener("click", () => {
+                    const fname = document.getElementById("name").value;
+                    const lname = document.getElementById("lastname").value;
+                    const fullname = document.querySelector("#fullname");
+                    fullname.textContent = `Your name is ${fname} ${lname}.`; 
+                })
+        </script> -->
+
+<!-- convert number to string -->
+
+        <!-- <script>
+            const myString = "123";
+            const myNum = Number(myString);
+            console.log(typeof myNum);
+            // number
+        </script> -->
+
+<!-- convert string to name -->
+
+        <!-- <script>
+             const myNum2 = 123;
+            const myString2 = String(myNum2);
+            console.log(typeof myString2);
+            // string
+        </script> -->
+
+<!-- Lenght of text -->
+
+        <!-- <script>
+            var name = "leonard";
+            var Length = name.length;
+            console.log(Length);
+        </script> -->
+
+<!-- Charat , return position of index   -->
+
+        <!-- <script>
+        var name= "leonard";    
+        let position = name.charAt(0);
+
+        console.log(position);
+        </script> -->
+
+<!--charcodeat return utf16 code-->
+
+    <!-- <p id="output"></p>
+        <script>
+            var name = "leonard";
+            document.getElementById("output").innerHTML = name.charAt(1);
+        </script> -->
+
+<!-- return letter of position with at() -->
+
+        <!-- <p id="name"></p>
+        <P id="name1"></P>
+        <script>
+            const NAME = "leonard";
+            document.getElementById("name").innerHTML = NAME.at(4);
+            document.getElementById("name1").innerHTML = NAME[3];
+        </script> -->
+
+ <!-- Extract parts of string-->
+
+        <!-- <p id="extract"></p>
+        
+        <script>
+            let name = "leonard john farmer";
+            document.getElementById("extract").innerHTML = name.slice(3, 10)
+            document.getElementById("extract").innerHTML = name.substring(4,7)
+        </script> -->
+
+<!--Convert to upper case or lowercase-->
+
+        <!-- <p id="uppercase"></p>
+        <p id="lowercase"></p>
+
+        <script type="text/javascript">
+            const upper = "leonard";
+            const lower = "FARMER";
+
+            document.getElementById("uppercase").innerHTML = upper.toUpperCase();
+            document.getElementById("lowercase").innerHTML = lower.toLowerCase();
+
+        </script> -->
+
+<!--concat-->
+
+        <!-- <p id="output"></p>
+
+        <script type="text/javascript">
+            var fname = "leonard";
+            var lname = "farmer";
+
+            document.getElementById("output").innerHTML = fname.concat(" ",lname);
+        </script> -->
+    
+<!--remove whitespace-->
+
+        <!-- <p id="name"></p>
+
+        <script type="text/javascript">
+
+            let name="Leonard";
+            let lname=" John   ";
+
+            document.getElementById("name").innerHTML= name.concat(" ", lname.trim());
+        </script> -->
+        
+
+        <!-- .pop() remove from array
+        .push() add to array
+        <script>
+            document.getElementsByTagName(
+        </script> -->
+
+    </body>
+
+</html>
