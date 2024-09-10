@@ -1,22 +1,15 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import useCurrentTime from "./useCurrentTime";
 
 export default function useShopStatus() {
-  const time = useCurrentTime();
-  const ref = useRef(false);
-  const [shopStat, setShopStat] = useState("Closed!");
+  const [time, getHour] = useCurrentTime();
+  const [shopStat, setShopStat] = useState(null);
 
   useEffect(() => {
-    const currentHour = parseInt(time.split(":")[0]);
+    getHour >= 9 && getHour <= 16
+      ? setShopStat("We are Open!")
+      : setShopStat("We are Closed!!");
+  }, [time, getHour]);
 
-    if (currentHour >= 9 && currentHour <= 16) {
-      setShopStat("Open!");
-      ref.current = true;
-    } else if (currentHour >= 17) {
-      setShopStat("Closed!");
-      ref.current = false;
-    }
-  }, [time]);
-
-  return { time, shopStat };
+  return shopStat;
 }

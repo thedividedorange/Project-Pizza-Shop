@@ -1,9 +1,11 @@
 import React from "react";
 import useShopStatus from "hooks/useShopStatus";
+import useCurrentTime from "hooks/useCurrentTime";
 import "./Navbar.css";
 
 export default function Navbar() {
-  const { time, shopStat } = useShopStatus();
+  const shopStat = useShopStatus();
+  const [time] = useCurrentTime();
 
   return (
     <nav className="navbar bg-dark border-bottom border-body">
@@ -22,7 +24,7 @@ export default function Navbar() {
           </div>
           <div className="d-flex align-items-baseline text-light">
             <div className="w-fixed">{time}</div>
-            <span className="fs-6 px-2">We are {shopStat}</span>
+            <span className="fs-6 px-2">{shopStat}</span>
           </div>
         </div>
         <div className="navRight d-flex align-items-center">
