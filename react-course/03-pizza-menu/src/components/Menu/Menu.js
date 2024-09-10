@@ -16,15 +16,15 @@ export default function Menu() {
           All from our stone oven, all Organic, all Delicious.
         </p>
         <div className="container-lg d-flex flex-wrap justify-content-center gap-2 mx-auto">
-          {dataFetch.map((p) => {
+          {dataFetch.map((item) => {
             return (
               <PizzaLayout
-                name={p.name}
-                ingredients={p.ingredients}
-                picture={p.photoName}
-                pictureAlt={p.alt}
-                price={p.price}
-                inStock={p.soldOut}
+                name={item.name}
+                ingredients={item.ingredients}
+                picture={item.photoName}
+                pictureAlt={item.alt}
+                price={item.price}
+                inStock={item.soldOut}
               />
             );
           })}
