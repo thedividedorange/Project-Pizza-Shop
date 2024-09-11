@@ -11,5 +11,5 @@ export default function useShopStatus() {
       : setShopStat("We are Closed!!");
   }, [time, getHour]);
 
-  return shopStat;
+  return [shopStat, getHour];
 }

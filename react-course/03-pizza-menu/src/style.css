@@ -1,0 +1,53 @@
+* {
+  font-family: "IM Fell DW Pica SC", serif;
+}
+
+:root {
+  --color-primary-100: #d60f0f;
+  --color-primary-200: #e03f29;
+  --color-primary-300: #e85c42;
+  --color-primary-400: #f0765b;
+  --color-primary-500: #f68e75;
+  --color-primary-600: #fba58f;
+
+  --color-surface-100: #121212;
+  --color-surface-200: #282828;
+  --color-surface-300: #3f3f3f;
+  --color-surface-400: #575757;
+  --color-surface-500: #717171;
+  --color-surface-600: #8b8b8b;
+
+  --color-surface-mixed-100: #251713;
+  --color-surface-mixed-200: #3a2c28;
+  --color-surface-mixed-300: #50433f;
+  --color-surface-mixed-400: #675b58;
+  --color-surface-mixed-500: #7e7471;
+  --color-surface-mixed-600: #978e8c;
+}
+
+.body-bg-100 {
+  background-color: var(--color-surface-100);
+}
+
+.logo,
+h1,
+h2,
+h3,
+ul,
+li {
+  font-family: "Cabin Sketch", sans-serif;
+  color: #fff;
+}
+
+p,
+span {
+  color: var(--color-surface-600);
+}
+
+.border-dark-s200 {
+  border-color: var(--color-surface-200) !important;
+}
+
+.bg-color-p500 {
+  background-color: var(--color-primary-500);
+}

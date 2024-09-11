@@ -1,9 +1,12 @@
 import React from "react";
 import PizzaData from "data/PizzaData";
 import PizzaLayout from "components/PizzaLayout/PizzaLayout";
+import Order from "components/Order/Order";
+import "./Menu.css";
 
 export default function Menu() {
   const dataFetch = PizzaData();
+  const isValidData = dataFetch.length;
 
   return (
     <>
@@ -15,21 +18,19 @@ export default function Menu() {
           Browse our Authentic Italian cuisine & creative dishes to choose from.
           All from our stone oven, all Organic, all Delicious.
         </p>
-        <div className="container-lg d-flex flex-wrap justify-content-center gap-2 mx-auto">
-          {dataFetch.map((item) => {
-            return (
-              <PizzaLayout
-                name={item.name}
-                ingredients={item.ingredients}
-                picture={item.photoName}
-                pictureAlt={item.alt}
-                price={item.price}
-                inStock={item.soldOut}
-              />
-            );
-          })}
-        </div>
+
+        {isValidData > 0 ? (
+          <div className="container-lg d-flex flex-wrap justify-content-center gap-2 mx-auto">
+            {dataFetch.map((pizza) => {
+              return <PizzaLayout key={pizza.name} pizzaObj={pizza} />;
+            })}
+          </div>
+        ) : (
+          <p>We are still working on our menu, please come back later!</p>
+        )}
       </div>
+
+      <Order />
     </>
   );
 }
