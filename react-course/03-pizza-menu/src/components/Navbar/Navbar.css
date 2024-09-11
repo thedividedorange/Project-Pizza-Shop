@@ -1,5 +1,3 @@
-@import url("style.css");
-
 #pizzaNav > div {
   max-width: 1500px;
 }
@@ -33,6 +31,7 @@
 
 #pizzaNav ul li {
   filter: drop-shadow(0px 2px 4px var(--color-surface-100));
+  letter-spacing: 1.4px;
 }
 
 #pizzaNav ul li:hover {
