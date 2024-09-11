@@ -1,17 +1,17 @@
 import React from "react";
+import Button from "components/Button/Button";
 
-export default function OrderNow(props) {
+export default function OrderNow({ msg, buttonClass }) {
   return (
     <>
-      <p className="d-flex justify-content-center fs-5">{props.msg}</p>
+      <p className="d-flex justify-content-center fs-5">{msg}</p>
       <div className="d-flex justify-content-center">
-        <button
-          type="button"
-          className={`btn btn-dark btn-lg btn-outline-secondary text-white w-50 ${props.class}`}
-          style={{ maxWidth: "20em" }}
-        >
-          Order Now
-        </button>
+        <Button
+          btnClass={`btn btn-dark btn-lg btn-outline-secondary text-white w-50 ${buttonClass}`}
+          btnType="button"
+          btnStyle={{ maxWidth: "20em" }}
+          btnName="Order Now"
+        />
       </div>
     </>
   );

@@ -1,18 +1,19 @@
 import React from "react";
 
-export default function OpenCloseSign() {
+export default function OpenCloseSign({ status }) {
   return (
-    <div class="container-sign">
-      <label for="kubilay">
-        <div class="top">
-          <div class="pin">
-            <div class="rope left"></div>
-            <div class="rope right"></div>
+    <div id="openCloseContainer" className={`container-sign`}>
+      <label htmlFor="kubilay">
+        <div className="top">
+          <div className="pin">
+            <div className="rope left"></div>
+            <div className="rope right"></div>
           </div>
         </div>
-        <div class="bottom">
-          <div class="side front">Open</div>
-          <div class="side back">Closed</div>
+        <div className="bottom">
+          <div className={`side ${status === "open" ? "front" : "back"}`}>
+            {status === "open" ? "Open" : "Closed"}
+          </div>
         </div>
       </label>
     </div>

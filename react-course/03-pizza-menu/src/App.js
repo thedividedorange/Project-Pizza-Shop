@@ -1,6 +1,7 @@
 import React from "react";
 
 import Menu from "./components/Menu/Menu";
+import Order from "components/Order/Order";
 import PageLayout from "./layout";
 // import PizzaData from "./components/PizzaData";
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <PageLayout>
         <Menu />
+        <Order />
       </PageLayout>
     </>
   );

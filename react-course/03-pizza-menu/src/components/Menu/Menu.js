@@ -1,7 +1,7 @@
 import React from "react";
 import PizzaData from "data/PizzaData";
 import PizzaLayout from "components/PizzaLayout/PizzaLayout";
-import Order from "components/Order/Order";
+
 import "./Menu.css";
 
 export default function Menu() {
@@ -29,8 +29,6 @@ export default function Menu() {
           <p>We are still working on our menu, please come back later!</p>
         )}
       </div>
-
-      <Order />
     </>
   );
 }
