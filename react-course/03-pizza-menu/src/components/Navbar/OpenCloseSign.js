@@ -2,7 +2,7 @@ import React from "react";
 
 export default function OpenCloseSign({ status }) {
   return (
-    <div id="openCloseContainer" className={`container-sign`}>
+    <div id="openCloseContainer" className="container-sign">
       <label htmlFor="kubilay">
         <div className="top">
           <div className="pin">

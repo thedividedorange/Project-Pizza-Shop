@@ -1,17 +1,20 @@
 import React from "react";
-import Header from "components/Header/Header";
-import Menu from "./components/Menu/Menu";
-import Order from "components/Order/Order";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PageLayout from "./layout";
+import Home from "pages/Home";
+import Pricing from "pages/Pricing/pricing";
 
 function App() {
   return (
     <>
-      <PageLayout>
-        <Header />
-        <Menu />
-        <Order />
-      </PageLayout>
+      <Router>
+        <Routes>
+          <Route path="/" element={<PageLayout />}>
+            <Route index element={<Home />} />
+            <Route path="/pricing" element={<Pricing />} />
+          </Route>
+        </Routes>
+      </Router>
     </>
   );
 }

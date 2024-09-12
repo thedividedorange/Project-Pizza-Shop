@@ -1,10 +1,10 @@
 import React from "react";
 import PizzaData from "data/PizzaData";
-import PizzaLayout from "components/PizzaLayout/PizzaLayout";
+import PizzaLayout from "components/Layout/PizzaItem";
 import "./Menu.css";
 
 export default function Menu() {
-  const pizzas = PizzaData();
+  const pizzas = PizzaData;
   const hasPizzas = pizzas.length > 0;
 
   return (
@@ -12,7 +12,10 @@ export default function Menu() {
       <h2 className="fw-bold mt-2 border border border-2 border-start-0 border-end-0 border-dark">
         Our Menu
       </h2>
-      <p className="container-fluid d-flex justify-content-center text-center fs-5 mx-auto px-2 py-4 w-50">
+      <p
+        id="menuIntro"
+        className="container-fluid d-flex justify-content-center text-center fs-5 mx-auto px-2 py-4"
+      >
         Browse our Authentic Italian cuisine & creative dishes to choose from.
         All from our stone oven, all Organic, all Delicious.
       </p>

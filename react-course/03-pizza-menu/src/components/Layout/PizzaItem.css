@@ -1,0 +1,19 @@
+#pizzaItem {
+  width: 26em;
+}
+
+#pizzaItem img {
+  width: 13em;
+  object-fit: contain;
+}
+
+#pizzaaItem #right {
+  max-width: calc(100% - 170px);
+  flex-basis: 0;
+}
+
+.outOfStock {
+  filter: rgb(128, 128, 128);
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
