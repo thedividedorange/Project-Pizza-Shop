@@ -25,7 +25,7 @@ function Floater() {
       <div className={`sidebar ${isOpen ? "active" : ""}`}>
         <div className="sidebar-content">
           <p>
-            Designed by{" "}
+            Designed by&nbsp;
             <a
               href="https://github.com/TheDividedOrange"
               target="_blank"

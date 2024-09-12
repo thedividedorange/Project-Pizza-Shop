@@ -90,6 +90,10 @@
   .sidebar.active .sidebar-content {
     width: 80vw;
   }
+
+  .sidebar p {
+    padding-right: 3em;
+  }
 }
 
 @keyframes glow {
