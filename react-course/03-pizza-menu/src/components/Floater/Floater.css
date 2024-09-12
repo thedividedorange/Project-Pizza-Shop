@@ -9,6 +9,11 @@
   transition: width 0.3s ease;
   z-index: 99;
   border-radius: 5px;
+  animation: glow 1s infinite alternate;
+}
+
+.sidebar:hover {
+  background-color: var(--color-surface-100);
 }
 
 .sidebar-content {
@@ -57,6 +62,7 @@
   cursor: pointer;
   z-index: 100;
   transition: background-color 0.1s ease-in, right 0.3s ease;
+  animation: glow 1s infinite alternate;
 }
 
 .sidebar-toggle:hover {
@@ -83,5 +89,14 @@
 
   .sidebar.active .sidebar-content {
     width: 80vw;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px -8px #3a3a3a;
+  }
+  to {
+    box-shadow: 0 0 20px 8px #3a3a3a;
   }
 }

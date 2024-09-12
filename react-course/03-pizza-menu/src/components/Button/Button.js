@@ -9,6 +9,7 @@ const Button = (props) => {
       style={props.btnStyle}
     >
       {props.btnName}
+      {props.btnExtras}
     </button>
   );
 };
