@@ -44,7 +44,7 @@ To set up the project locally, follow these steps:
 
    ```bash
    git clone https://github.com/your-username/pizza-store-react.git
-
+   ```
 2. **Navigate into the project directory:**
   ```bash
    cd pizza-store-react
@@ -61,14 +61,10 @@ To set up the project locally, follow these steps:
    ```bash
    npm start
    ```
-5. **Start the Server**:
 
-   ```
-   npm start
-   ```
-6. **Open the application**:
+5. **Open the application**:
 
-   ```
+   ````bash
    http://localhost:3000
    ```
 
