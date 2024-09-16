@@ -1,17 +1,28 @@
 import React from "react";
 
-const Button = (props) => {
+function Button({
+  btnID,
+  btnClass,
+  btnType,
+  btnOnClick,
+  btnStyle,
+  disabled,
+  children,
+  ...rest
+}) {
   return (
     <button
-      className={props.btnClass}
-      type={props.btnType}
-      onClick={props.btnOnClick}
-      style={props.btnStyle}
+      id={btnID}
+      className={btnClass}
+      type={btnType}
+      onClick={btnOnClick}
+      style={btnStyle}
+      disabled={disabled}
+      {...rest}
     >
-      {props.btnName}
-      {props.btnExtras}
+      {children}
     </button>
   );
-};
+}
 
 export default Button;

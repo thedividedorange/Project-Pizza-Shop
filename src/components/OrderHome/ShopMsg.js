@@ -1,6 +1,6 @@
 import React from "react";
 import useCurrentTime from "hooks/useCurrentTime";
-import OrderNow from "./OrderNow";
+import OrderNow from "./OrderNowBtn";
 
 export default function Order() {
   const shopOpenTime = useCurrentTime()[1];

@@ -1,23 +1,23 @@
-.list-container {
+#pricingList .list-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-#listRow img {
+#pricingList #listRow img {
   width: 100px;
   height: auto;
   object-fit: cover;
   border-radius: 5px;
 }
 
-#pricingList > .list-group-item {
+#pricingList .list-group-item {
   border: 1px solid #343a40;
   border-color: var(--color-surface-300);
   background-color: var(--color-surface-200);
 }
 
-#pricingList > .list-group-item:hover {
+#pricingList .list-group-item:hover {
   background-color: var(--color-surface-100);
   cursor: pointer;
   transform: scale(1.01);

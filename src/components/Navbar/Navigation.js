@@ -15,7 +15,7 @@ export default function Navigation() {
         </Link>
       </li>
       <li className="p-2">
-        <Link to="/" className="text-light text-decoration-none">
+        <Link to="/order-now" className="text-light text-decoration-none">
           Order Now
         </Link>
       </li>

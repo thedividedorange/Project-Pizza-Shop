@@ -53,3 +53,8 @@ span {
 .bg-color-p500 {
   background-color: var(--color-primary-500);
 }
+
+.btn:hover,
+.btn:active {
+  background-color: var(--color-surface-100) !important;
+}

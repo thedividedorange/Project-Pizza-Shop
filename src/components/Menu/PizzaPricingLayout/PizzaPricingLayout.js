@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PizzaPricingCard({ pizzaObj }) {
+export default function PizzaPricingLayout({ pizzaObj }) {
   return (
     <li
       id="listRow"
@@ -15,11 +15,6 @@ export default function PizzaPricingCard({ pizzaObj }) {
       </div>
       <div className="ms-auto text-end">
         <h5 className="mb-1">${pizzaObj.price}</h5>
-        {pizzaObj.soldOut ? (
-          <span className="badge bg-danger">Sold Out</span>
-        ) : (
-          <span className="badge bg-success">Available</span>
-        )}
       </div>
     </li>
   );
