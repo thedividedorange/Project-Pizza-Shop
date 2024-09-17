@@ -1,16 +1,23 @@
 import React from "react";
-import { useState } from "react";
+import { useEffect } from "react";
+import useQuantity from "hooks/useQuantity";
 import AvailablityBadge from "components/AvailabilityBadge/AvailabilityBadge";
 import QuantityControl from "./QuantityControl";
 import ProductPrice from "./ProductPrice";
 import Button from "components/Button/Button";
+import UpdatePizzaData from "./updatePizzaData";
 
 import "../../ordernow.css";
 
 export default function OrderCard({ pizzaObj, cart, setCart }) {
-  const [quantity, setQuantity] = useState(1);
-  const handleIncrement = () => setQuantity(quantity + 1);
-  const handleDecrement = () => quantity > 1 && setQuantity(quantity - 1);
+  const { quantity, handleIncrement, handleDecrement, setQuantity } =
+    useQuantity(pizzaObj.qty);
+
+  useEffect(() => {
+    if (quantity > pizzaObj.qty) {
+      setQuantity(pizzaObj.qty);
+    }
+  }, [pizzaObj.qty, quantity, setQuantity]);
 
   return (
     <div
@@ -58,7 +65,8 @@ export default function OrderCard({ pizzaObj, cart, setCart }) {
                     productPrice: pizzaObj.price,
                     productQty: quantity,
                   };
-                  console.log(cart);
+
+                  UpdatePizzaData(pizzaObj.name, quantity);
                   return setCart((cart) => [...cart, newCartItem]);
                 }
               : undefined
