@@ -1,6 +1,6 @@
 import React from "react";
 import PizzaData from "data/PizzaData";
-import PizzaItemLayout from "components/Menu/PizzaItemLayout/PizzaItemLayout";
+import PizzaItemLayout from "./PizzaItemLayout/PizzaItemLayout";
 import "./Menu.css";
 
 export default function Menu() {

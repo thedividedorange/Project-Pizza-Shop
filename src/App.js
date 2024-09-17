@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PageLayout from "./layout";
-import Home from "pages/Home";
-import Pricing from "pages/Pricing/pricing";
+import Home from "pages/home/home";
+import Pricing from "pages/pricing/pricing";
 import OrderNow from "pages/order-now/order-now.js";
 
 function App() {

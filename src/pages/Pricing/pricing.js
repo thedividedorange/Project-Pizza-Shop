@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderPricing from "components/Header/HeaderPricing";
-import PizzaPricingLayout from "components/Menu/PizzaPricingLayout/PizzaPricingLayout";
+import PizzaPricingLayout from "./PizzaPricingLayout/PizzaPricingLayout";
 import pizzaData from "../../data/PizzaData";
 
 import "./pricing.css";

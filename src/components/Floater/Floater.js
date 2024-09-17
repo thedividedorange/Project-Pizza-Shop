@@ -13,14 +13,12 @@ function Floater() {
         btnClass={`sidebar-toggle ${isOpen ? "active" : ""}`}
         btnOnClick={toggleSidebar}
       >
-        {
-          <img
-            id="toggleIcon"
-            src="assets/bars-svg.svg"
-            style={{ width: "30px" }}
-            alt="hamburger Icon"
-          />
-        }
+        <img
+          id="toggleIcon"
+          src="assets/bars-svg.svg"
+          style={{ width: "30px" }}
+          alt="hamburger Icon"
+        />
       </Button>
 
       <div className={`sidebar ${isOpen ? "active" : ""}`}>

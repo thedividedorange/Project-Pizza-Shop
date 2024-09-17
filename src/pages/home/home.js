@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "components/Header/Header";
-import Menu from "components/Menu/Menu";
-import ShopMsg from "components/OrderHome/ShopMsg";
+import Menu from "./Menu/Menu";
+import ShopMsg from "./ShopStatus/ShopMsg";
 
 export default function Home() {
   return (

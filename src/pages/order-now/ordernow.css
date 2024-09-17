@@ -1,0 +1,54 @@
+#orderCard {
+  background-color: var(--color-surface-200);
+}
+
+#orderCard #badgeContainer {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-transform: uppercase;
+}
+
+#orderCard h4 {
+  color: rgb(255, 255, 255) !important;
+}
+
+#orderCard .incrementor,
+#orderCard .decrementor {
+  width: 30px;
+  text-align: center;
+  border: 0.4px solid;
+  border-radius: 4px;
+  box-shadow: 0 4px 7px 2px rgba(27, 27, 27, 0.69);
+  text-shadow: 0px 1px 2px rgba(115, 115, 115, 0.496);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#orderCard .incrementor:hover,
+#orderCard .decrementor:hover {
+  background-color: var(--color-surface-100);
+  transform: scale(1.2);
+}
+
+#orderCard .incrementor:active,
+#orderCard .decrementor:active {
+  background-color: var(--color-surface-100);
+  transform: scale(0.95);
+}
+
+#btnAtc:active {
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
+}
+
+.productWrapper {
+  max-height: 500px;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
+  .productWrapper {
+    max-height: 300px;
+  }
+}

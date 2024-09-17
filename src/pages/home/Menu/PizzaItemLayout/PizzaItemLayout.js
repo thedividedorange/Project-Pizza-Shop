@@ -1,5 +1,5 @@
 import React from "react";
-import AvailablityBadge from "../AvailabilityBadge";
+import AvailablityBadge from "components/AvailabilityBadge/AvailabilityBadge";
 import "./PizzaItemLayout.css";
 
 export default function PizzaItemLayout({ pizzaObj }) {
