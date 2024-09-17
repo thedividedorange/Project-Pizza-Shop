@@ -36,6 +36,7 @@ export default function OrderCard({ pizzaObj, cart, setCart }) {
         <p className="card-text">{pizzaObj.ingredients}</p>
         <div className="d-flex justify-content-between">
           <QuantityControl
+            maxStock={pizzaObj.qty}
             quantity={quantity}
             onIncrement={handleIncrement}
             onDecrement={handleDecrement}
@@ -55,8 +56,9 @@ export default function OrderCard({ pizzaObj, cart, setCart }) {
                     productTitle: pizzaObj.name,
                     productDesc: pizzaObj.ingredients,
                     productPrice: pizzaObj.price,
+                    productQty: quantity,
                   };
-
+                  console.log(cart);
                   return setCart((cart) => [...cart, newCartItem]);
                 }
               : undefined

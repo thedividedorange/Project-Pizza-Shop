@@ -2,6 +2,7 @@ import React from "react";
 import "../../ordernow.css";
 
 export default function QuantityControl({
+  maxStock,
   quantity,
   onIncrement,
   onDecrement,
@@ -10,7 +11,9 @@ export default function QuantityControl({
     <div className="d-flex justify-content-start mb-3">
       <div className="fs-4 d-flex align-items-center position-relative">
         <p
-          className="incrementor border-dark-s200 me-2 mb-0"
+          className={`incrementor border-dark-s200 me-2 mb-0 ${
+            quantity === maxStock && "disabled"
+          }`}
           onClick={onIncrement}
         >
           +
