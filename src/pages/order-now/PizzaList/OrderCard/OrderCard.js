@@ -47,24 +47,25 @@ export default function OrderCard({ pizzaObj, cart, setCart }) {
           btnClass="d-flex w-100 btn btn-dark btn-lg justify-content-center btn-outline-secondary text-white"
           btnType="button"
           disabled={pizzaObj.soldOut || undefined}
+          btnOnClick={
+            !pizzaObj.soldOut
+              ? () => {
+                  const newCartItem = {
+                    productCover: pizzaObj.photoName,
+                    productTitle: pizzaObj.name,
+                    productDesc: pizzaObj.ingredients,
+                    productPrice: pizzaObj.price,
+                  };
+
+                  return setCart((cart) => [...cart, newCartItem]);
+                }
+              : undefined
+          }
         >
           {pizzaObj.soldOut ? (
             <span>UNAVAILABLE</span>
           ) : (
-            <span
-              onClick={() => {
-                const newCartItem = {
-                  productCover: pizzaObj.photoName,
-                  productTitle: pizzaObj.name,
-                  productDesc: pizzaObj.ingredients,
-                  productPrice: pizzaObj.price,
-                };
-                console.log([...cart, newCartItem]);
-                return setCart((cart) => [...cart, newCartItem]);
-              }}
-            >
-              ADD TO CART
-            </span>
+            <span>ADD TO CART</span>
           )}
         </Button>
       </div>
