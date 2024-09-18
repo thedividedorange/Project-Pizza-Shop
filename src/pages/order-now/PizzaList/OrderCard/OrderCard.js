@@ -55,22 +55,7 @@ export default function OrderCard({ pizzaObj, cart, setCart }) {
           btnClass="d-flex w-100 btn btn-dark btn-lg justify-content-center btn-outline-secondary text-white"
           btnType="button"
           disabled={pizzaObj.soldOut || undefined}
-          btnOnClick={
-            !pizzaObj.soldOut
-              ? () => {
-                  const newCartItem = {
-                    productCover: pizzaObj.photoName,
-                    productTitle: pizzaObj.name,
-                    productDesc: pizzaObj.ingredients,
-                    productPrice: pizzaObj.price,
-                    productQty: quantity,
-                  };
-
-                  UpdatePizzaData(pizzaObj.name, quantity);
-                  return setCart((cart) => [...cart, newCartItem]);
-                }
-              : undefined
-          }
+          btnOnClick={() => AddToCart(pizzaObj, cart, setCart, quantity)}
         >
           {pizzaObj.soldOut ? (
             <span>UNAVAILABLE</span>
@@ -81,4 +66,32 @@ export default function OrderCard({ pizzaObj, cart, setCart }) {
       </div>
     </div>
   );
+}
+
+function AddToCart(pizzaObj, cart, setCart, quantity) {
+  if (pizzaObj.soldOut) return undefined;
+
+  const newCartItem = {
+    productCover: pizzaObj.photoName,
+    productTitle: pizzaObj.name,
+    productDesc: pizzaObj.ingredients,
+    productPrice: pizzaObj.price,
+    productQty: quantity,
+  };
+
+  UpdatePizzaData(pizzaObj.name, quantity);
+
+  const findPizza = cart.findIndex(
+    (PizzaItem) => PizzaItem.productTitle === newCartItem.productTitle
+  );
+
+  return findPizza === -1
+    ? setCart((cart) => [...cart, newCartItem])
+    : setCart((cart) => {
+        return cart.map((item, index) => {
+          return index === findPizza
+            ? { ...item, productQty: item.productQty + quantity }
+            : item;
+        });
+      });
 }

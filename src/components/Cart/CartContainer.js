@@ -1,6 +1,6 @@
 import React from "react";
-import CartPopupModal from "./CartPopupModal";
-import FloatingCartButton from "./FloatingCartButton";
+import CartPopupModal from "./CartPopupModal/CartPopupModal";
+import FloatingCartButton from "./FloatingCartButton/FloatingCartButton";
 import { useCart } from "./CartContext";
 
 export default function CartContainer() {
@@ -9,7 +9,7 @@ export default function CartContainer() {
   return (
     <>
       <CartPopupModal cart={cart} isCartOpen={isCartOpen} />
-      <FloatingCartButton toggleCart={toggleCart} />
+      <FloatingCartButton cart={cart} toggleCart={toggleCart} />
     </>
   );
 }

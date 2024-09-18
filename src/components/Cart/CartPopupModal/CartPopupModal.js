@@ -1,9 +1,8 @@
 import React from "react";
-import ProductCartLayout from "./ProductCartLayout";
+import ProductCartLayout from "../ProductCartLayout/ProductCartLayout";
 import Button from "components/Button/Button";
 
-import "./Cart.css";
-// import { Form } from "react-router-dom";
+import "./CartPopupModal.css";
 
 export default function CartPopupModal({ cart, isCartOpen }) {
   return (
