@@ -1,10 +1,18 @@
 import React from "react";
 import ProductCartLayout from "../ProductCartLayout/ProductCartLayout";
 import Button from "components/Button/Button";
+import { Link } from "react-router-dom";
 
 import "./CartPopupModal.css";
 
-export default function CartPopupModal({ cart, isCartOpen }) {
+export default function CartPopupModal({ cart, isCartOpen, toggleCart }) {
+  const subTotal = () =>
+    cart.reduce(
+      (accumulator, currentValue) =>
+        accumulator + currentValue.productTotalPrice,
+      0
+    );
+
   return (
     <>
       <section
@@ -20,10 +28,14 @@ export default function CartPopupModal({ cart, isCartOpen }) {
                   <div className="row">
                     <div className="col-lg-7">
                       <h5 className="mb-3">
-                        <a href="#!" className="text-body">
+                        <Link
+                          to="/order-now"
+                          className="text-body"
+                          onClick={toggleCart}
+                        >
+                          Continue Shopping
                           <i className="fas fa-long-arrow-alt-left me-2"></i>
-                          Continue shopping
-                        </a>
+                        </Link>
                       </h5>
                       <hr />
 
@@ -52,8 +64,8 @@ export default function CartPopupModal({ cart, isCartOpen }) {
                             productCover={item.productCover}
                             productTitle={item.productTitle}
                             productDesc={item.productDesc}
-                            productPrice={item.productPrice}
-                            productQTY={item.productQTY}
+                            productPrice={item.productTotalPrice}
+                            productQTY={item.productQty}
                           />
                         ))}
                       </div>
@@ -165,17 +177,17 @@ export default function CartPopupModal({ cart, isCartOpen }) {
 
                           <div className="d-flex justify-content-between">
                             <p className="mb-2">Subtotal</p>
-                            <p className="mb-2">$4798.00</p>
+                            <p className="mb-2">${subTotal()}</p>
                           </div>
 
                           <div className="d-flex justify-content-between">
                             <p className="mb-2">Shipping</p>
-                            <p className="mb-2">$20.00</p>
+                            <p className="mb-2">$5.00</p>
                           </div>
 
                           <div className="d-flex justify-content-between mb-4">
                             <p className="mb-2">Total(Incl. taxes)</p>
-                            <p className="mb-2">$4818.00</p>
+                            <p className="mb-2">${subTotal() + 5.0}</p>
                           </div>
 
                           <Button
@@ -185,9 +197,9 @@ export default function CartPopupModal({ cart, isCartOpen }) {
                             btnClass="d-flex w-100 btn btn-dark btn-lg justify-content-center btn-outline-secondary text-white"
                           >
                             <div className="d-flex justify-content-between">
-                              <span>$4818.00</span>
+                              <span>${subTotal() + 5.0}</span>
                               <span>
-                                Checkout
+                                &nbsp;Checkout
                                 <i className="fas fa-long-arrow-alt-right ms-2"></i>
                               </span>
                             </div>

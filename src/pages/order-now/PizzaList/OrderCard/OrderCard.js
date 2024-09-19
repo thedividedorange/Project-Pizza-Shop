@@ -77,6 +77,8 @@ function AddToCart(pizzaObj, cart, setCart, quantity) {
     productDesc: pizzaObj.ingredients,
     productPrice: pizzaObj.price,
     productQty: quantity,
+    productTotalPrice:
+      quantity > 1 ? pizzaObj.price * quantity : pizzaObj.price,
   };
 
   UpdatePizzaData(pizzaObj.name, quantity);
@@ -87,11 +89,16 @@ function AddToCart(pizzaObj, cart, setCart, quantity) {
 
   return findPizza === -1
     ? setCart((cart) => [...cart, newCartItem])
-    : setCart((cart) => {
-        return cart.map((item, index) => {
-          return index === findPizza
-            ? { ...item, productQty: item.productQty + quantity }
-            : item;
-        });
-      });
+    : setCart((cart) =>
+        cart.map((item, index) =>
+          index === findPizza
+            ? {
+                ...item,
+                productQty: item.productQty + newCartItem.productQty,
+                productTotalPrice:
+                  item.productTotalPrice + newCartItem.productTotalPrice,
+              }
+            : item
+        )
+      );
 }

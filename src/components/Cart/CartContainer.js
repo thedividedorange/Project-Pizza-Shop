@@ -8,7 +8,11 @@ export default function CartContainer() {
 
   return (
     <>
-      <CartPopupModal cart={cart} isCartOpen={isCartOpen} />
+      <CartPopupModal
+        cart={cart}
+        isCartOpen={isCartOpen}
+        toggleCart={toggleCart}
+      />
       <FloatingCartButton cart={cart} toggleCart={toggleCart} />
     </>
   );
