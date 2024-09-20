@@ -46,6 +46,12 @@
   transition: transform 0.2s ease;
 }
 
+.outOfStock {
+  filter: rgb(128, 128, 128);
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
 .productWrapper {
   max-height: 500px;
   overflow-y: auto;

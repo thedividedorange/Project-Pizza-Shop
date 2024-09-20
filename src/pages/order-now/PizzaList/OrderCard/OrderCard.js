@@ -26,7 +26,7 @@ export default function OrderCard({ pizzaObj, cart, setCart }) {
       style={{ width: "24em" }}
     >
       <img
-        className={`card-img-top ${pizzaObj.soldOut ? "out-of-stock" : ""}`}
+        className={`card-img-top ${pizzaObj.soldOut ? "outOfStock" : null}`}
         src={pizzaObj.photoName}
         alt={pizzaObj.alt}
         style={{ objectFit: "contain" }}
@@ -52,15 +52,15 @@ export default function OrderCard({ pizzaObj, cart, setCart }) {
         </div>
         <Button
           btnID="btnAtc"
-          btnClass="d-flex w-100 btn btn-dark btn-lg justify-content-center btn-outline-secondary text-white"
+          btnClass="d-flex w-100 btn btn-dark btn-lg justify-content-center btn-outline-secondary"
           btnType="button"
           disabled={pizzaObj.soldOut || undefined}
           btnOnClick={() => AddToCart(pizzaObj, cart, setCart, quantity)}
         >
           {pizzaObj.soldOut ? (
-            <span>UNAVAILABLE</span>
+            <span className="text-white">UNAVAILABLE</span>
           ) : (
-            <span>ADD TO CART</span>
+            <span className="text-white">ADD TO CART</span>
           )}
         </Button>
       </div>

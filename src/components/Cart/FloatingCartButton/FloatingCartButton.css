@@ -9,7 +9,7 @@
   border: none;
   color: #fff;
   font-size: 20px;
-  border: 0.4px solid var(--color-surface-200) s;
+  border: 0.4px solid var(--color-surface-200);
   align-items: center;
   justify-content: center;
   cursor: pointer;
