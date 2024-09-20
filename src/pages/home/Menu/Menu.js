@@ -1,6 +1,6 @@
 import React from "react";
 import PizzaData from "data/PizzaData";
-import PizzaLayout from "components/Layout/PizzaItem";
+import PizzaItemLayout from "./PizzaItemLayout/PizzaItemLayout";
 import "./Menu.css";
 
 export default function Menu() {
@@ -23,7 +23,7 @@ export default function Menu() {
       {hasPizzas ? (
         <div className="container-lg d-flex flex-wrap justify-content-center gap-2 mx-auto">
           {pizzas.map((pizza) => {
-            return <PizzaLayout key={pizza.name} pizzaObj={pizza} />;
+            return <PizzaItemLayout key={pizza.name} pizzaObj={pizza} />;
           })}
         </div>
       ) : (

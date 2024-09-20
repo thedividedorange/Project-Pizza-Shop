@@ -1,0 +1,48 @@
+#cartPopup {
+  display: flex;
+  position: fixed;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#cartPopup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#cartPopup.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#cartPopup .card-body.p-4 {
+  background-color: var(--color-surface-100);
+}
+
+#cartPopup a {
+  color: white !important;
+}
+
+#cartPopup .text-muted {
+  color: var(--color-surface-600) !important;
+}
+
+#cartPopup .card.mb-3 {
+  border-color: var(--color-surface-300);
+}
+
+#cartPopup .card.mb-3 .card-body {
+  background-color: var(--color-surface-200);
+  border-radius: var(--bs-card-border-radius);
+}
+
+#cartPopup .col-lg-5 .card.text-white.rounded-3 {
+  background-color: var(--color-surface-300);
+}

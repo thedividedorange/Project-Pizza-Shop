@@ -4,6 +4,7 @@ const pizzaData = [
     ingredients: "Bread with italian olive oil and rosemary",
     price: 6,
     photoName: "assets/pizzas/focaccia.jpg",
+    qty: 13,
     soldOut: false,
   },
   {
@@ -12,6 +13,7 @@ const pizzaData = [
     price: 10,
     photoName: "assets/pizzas/margherita.jpg",
     alt: "Margherita",
+    qty: 3,
     soldOut: false,
   },
   {
@@ -20,6 +22,7 @@ const pizzaData = [
     price: 12,
     photoName: "assets/pizzas/spinaci.jpg",
     alt: "Spinaci",
+    qty: 8,
     soldOut: false,
   },
   {
@@ -28,6 +31,7 @@ const pizzaData = [
     price: 12,
     photoName: "assets/pizzas/funghi.jpg",
     alt: "Funghi",
+    qty: 11,
     soldOut: false,
   },
   {
@@ -36,6 +40,7 @@ const pizzaData = [
     price: 15,
     photoName: "assets/pizzas/salamino.jpg",
     alt: "Salamino",
+    qty: 0,
     soldOut: true,
   },
   {
@@ -44,6 +49,7 @@ const pizzaData = [
     price: 18,
     photoName: "assets/pizzas/prosciutto.jpg",
     alt: "Prosciutto",
+    qty: 2,
     soldOut: false,
   },
 ];

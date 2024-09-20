@@ -1,7 +1,8 @@
 import React from "react";
-import "./PizzaItem.css";
+import AvailablityBadge from "components/AvailabilityBadge/AvailabilityBadge";
+import "./PizzaItemLayout.css";
 
-export default function PizzaItem({ pizzaObj }) {
+export default function PizzaItemLayout({ pizzaObj }) {
   return (
     <div id="pizzaItem" className="d-flex p-2 gap-3">
       <div className="d-flex flex-shrink-0">
@@ -22,11 +23,11 @@ export default function PizzaItem({ pizzaObj }) {
         <p className="fs-5">{pizzaObj.ingredients}</p>
         <div className="d-flex justify-content-between align-items-center mt-auto">
           <span className="fs-4 fw-bold">${pizzaObj.price}</span>
-          <span
-            className={`badge ${pizzaObj.soldOut ? "bg-danger" : "bg-success"}`}
-          >
-            {pizzaObj.soldOut ? "Sold Out" : "Available"}
-          </span>
+          <AvailablityBadge
+            item={pizzaObj}
+            stockMsg="In Stock"
+            OOSMsg="Out of Stock"
+          />
         </div>
       </div>
     </div>

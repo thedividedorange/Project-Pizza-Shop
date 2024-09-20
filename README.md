@@ -28,10 +28,11 @@ This **Pizza Store Web Application** is built using **React** and offers an inte
 - **Real-Time Updates**: React components automatically adjust based on the shop's current status.
 
 ## To Do
+
 - **Add to cart**: Add a shopping cart to the website to place orders.
 - **Mobile Responsiveness**: Improve mobile responsiveness.
 - **Pages**: Add pages "About Us" and Cart/Order Now.
-  
+
 ## Screenshots
 
 ![Screenshot](public/assets/screenshot-pizza.png)
@@ -45,17 +46,21 @@ To set up the project locally, follow these steps:
    ```bash
    git clone https://github.com/your-username/pizza-store-react.git
    ```
+
 2. **Navigate into the project directory:**
-  ```bash
-   cd pizza-store-react
-  ```
+
+```bash
+ cd pizza-store-react
+```
+
 3. **Install dependencies**:
 
-  ```bash
-   npm install
-   npm install bootstrap
-   npm install react-router-dom
-  ```
+```bash
+ npm install
+ npm install bootstrap
+ npm install react-router-dom
+```
+
 4. Start The Development Server:
 
    ```bash
@@ -67,16 +72,18 @@ To set up the project locally, follow these steps:
    ````bash
    http://localhost:3000
    ```
+   ````
 
 ## Contributing
 
 If you would like to contribute to this project, please follow these guidelines:
 
 1. Fork the repository.
-2. Create a new branch (```git checkout -b feature-branch```).
-3. Make your changes and commit them (```git commit -am 'Add new feature'```).
-4. Push to the branch (```git push origin feature-branch```).
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
 5. Create a new Pull Request.
 
 ## License
+
 This project is licensed under the MIT License
