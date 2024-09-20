@@ -99,7 +99,7 @@ export default function CartPopupModal({ cart, isCartOpen, toggleCart }) {
                                 type="text"
                                 id="typeName"
                                 className="form-control form-control-lg"
-                                siez="17"
+                                size="17"
                                 placeholder="Cardholder's Name"
                               />
                               <label className="form-label" htmlFor="typeName">
