@@ -15,7 +15,7 @@ export default function OrderPage() {
       <HeadeOrderNow />
       <CartContainer cart={cart} setCart={setCart} />
 
-      <div className="container-fluid d-flex flex-column justify-content-center align-items-center p-2">
+      <div className="container-fluid d-flex flex-column justify-content-center align-items-center p-2 pb-5">
         <h2 className="fw-bold mt-2 border border border-2 border-start-0 border-end-0 border-dark">
           Order from below..
         </h2>

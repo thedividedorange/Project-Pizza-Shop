@@ -1,4 +1,4 @@
-.sidebar {
+.github {
   position: fixed;
   top: 17%;
   right: 0;
@@ -12,11 +12,11 @@
   animation: glow 1s infinite alternate;
 }
 
-.sidebar:hover {
+.github:hover {
   background-color: var(--color-surface-100);
 }
 
-.sidebar-content {
+.github-content {
   color: #fff;
   padding: 20px;
   width: 250px;
@@ -27,24 +27,24 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.sidebar p {
+.github p {
   font-size: 14px;
   font-weight: bold;
   margin: 0;
   text-align: center;
 }
 
-.sidebar a {
+.github a {
   color: #1da1f2;
   text-decoration: none;
   font-weight: bold;
 }
 
-.sidebar a:hover {
+.github a:hover {
   text-decoration: underline;
 }
 
-.sidebar-toggle {
+.github-toggle {
   position: fixed;
   top: 19%;
   right: 0;
@@ -65,7 +65,7 @@
   animation: glow 1s infinite alternate;
 }
 
-.sidebar-toggle:hover {
+.github-toggle:hover {
   background-color: var(--color-surface-100);
   animation: spin 0.5s;
 }
@@ -95,29 +95,29 @@
   }
 }
 
-.sidebar-toggle.active {
+.github-toggle.active {
   right: 250px;
 }
 
-.sidebar.active {
+.github.active {
   width: 250px;
 }
 
 @media (max-width: 768px) {
-  .sidebar {
+  .github {
     width: 0;
   }
 
-  .sidebar-content {
+  .github-content {
     width: 80vw;
     max-width: 300px;
   }
 
-  .sidebar.active .sidebar-content {
+  .github.active .github-content {
     width: 80vw;
   }
 
-  .sidebar p {
+  .github p {
     padding-right: 3em;
   }
 }

@@ -6,7 +6,7 @@ export default function Status({ time }) {
     <>
       <div
         id="timerBox"
-        className="bg-color-p500 border border-1 border-dark-s200"
+        className="d-flex justify-content-center align-items-center bg-color-p500 border border-1 border-dark-s200"
       >
         <span className="timer">{time}</span>
       </div>

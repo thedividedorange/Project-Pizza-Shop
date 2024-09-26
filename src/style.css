@@ -25,9 +25,9 @@
   --color-surface-mixed-600: #978e8c;
 }
 
-.body-bg-100 {
+/* .body-bg-100 {
   background-color: var(--color-surface-100);
-}
+} */
 
 .logo,
 h1,
