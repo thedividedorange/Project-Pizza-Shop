@@ -1,7 +1,12 @@
 import React from "react";
+import Button from "components/Button/Button";
+import { useNavigate } from "react-router-dom";
+
 import "./Promo.css";
 
-export default function promo() {
+export default function Promo() {
+  const navigate = useNavigate();
+
   return (
     <section id="promo" className="container-fluid">
       <div className="container py-5 px-2">
@@ -9,9 +14,15 @@ export default function promo() {
           <div className="col-md-6">
             <div id="promoBox" className="p-4 text-center">
               <h2>DARE TO BE DIFFERENT!</h2>
-              <button className="btn btn-dark btn-lg btn-outline-secondary text-white w-full">
+              <Button
+                btnClass={
+                  "btn btn-dark btn-lg btn-outline-secondary text-white w-full"
+                }
+                btnType="button"
+                btnOnClick={() => navigate("/order-now")}
+              >
                 ORDER ONLINE NOW
-              </button>
+              </Button>
             </div>
           </div>
         </div>
