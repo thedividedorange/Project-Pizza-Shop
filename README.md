@@ -37,7 +37,7 @@ This **Pizza Store Web Application** is built using **React** and offers an inte
 
 ![Screenshot](public/assets/screenshot-home.png)
 
-![Screenshot](public/assets/screenshot-pizza.png)
+![Screenshot](public/assets/screenshot-order.png)
 
 ## Installation
 
