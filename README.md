@@ -26,14 +26,16 @@ This **Pizza Store Web Application** is built using **React** and offers an inte
 - **Responsive Design**: Designed for both desktop and mobile. **(Todo)**
 - **Custom Hooks**: Leveraging React hooks for better state and shop status management.
 - **Real-Time Updates**: React components automatically adjust based on the shop's current status.
+- **Add to cart**: Add a shopping cart to the website to place orders.
 
 ## To Do
 
-- **Add to cart**: Add a shopping cart to the website to place orders.
 - **Mobile Responsiveness**: Improve mobile responsiveness.
-- **Pages**: Add pages "About Us" and Cart/Order Now.
+- **Pages**: Add pages "About Us".
 
 ## Screenshots
+
+![Screenshot](public/assets/screenshot-home.png)
 
 ![Screenshot](public/assets/screenshot-pizza.png)
 
