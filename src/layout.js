@@ -16,7 +16,7 @@ const PageLayout = () => {
       <Navbar />
       <div
         id="mainContainer"
-        className="container-fluid d-flex flex-column min-vh-100 px-0 bgColor"
+        className="container-fluid d-flex flex-column min-vh-100 px-0 bg-black"
         ref={bodyColor}
       >
         <Floater />
