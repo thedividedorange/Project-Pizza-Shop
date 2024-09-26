@@ -30,7 +30,7 @@ export default function Header() {
           }}
         >
           Voted The Best Pizza, The Best Takeaway in Dublin and The Best
-          Takeaway in Ireland vat the National Takeaway Awards 2018
+          Takeaway in Ireland vat the National Takeaway Awards 2024
         </p>
       </div>
     </Layout>
