@@ -10,7 +10,7 @@ function Floater() {
   return (
     <>
       <Button
-        btnClass={`sidebar-toggle ${isOpen ? "active" : ""}`}
+        btnClass={`github-toggle ${isOpen ? "active" : ""}`}
         btnOnClick={toggleSidebar}
       >
         <img
@@ -21,8 +21,8 @@ function Floater() {
         />
       </Button>
 
-      <div className={`sidebar ${isOpen ? "active" : ""}`}>
-        <div className="sidebar-content">
+      <div className={`github ${isOpen ? "active" : ""}`}>
+        <div className="github-content">
           <p>
             Designed by&nbsp;
             <a

@@ -1,0 +1,28 @@
+#ads {
+  background-color: rgba(0, 0, 0, 0.619);
+}
+
+.adsWrapperLeft,
+.adsWrapperRight {
+  background-color: rgba(200, 18, 47, 0.77);
+}
+
+.adsWrapperRight {
+  transform: rotate3d(-5, 15, 0, -14deg);
+}
+
+.adsWrapperLeft {
+  transform: rotate3d(5, 15, 0, 14deg);
+}
+
+#testimonials {
+  border: 2px dashed #fff;
+}
+
+#promoBox {
+  border: 2px dashed #fff;
+}
+
+#promoBox {
+  background-color: rgba(200, 18, 47);
+}
