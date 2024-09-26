@@ -76,19 +76,15 @@ export default function CartPopupModal({ cart, isCartOpen, toggleCart }) {
                           <div className="d-flex justify-content-between align-items-center mb-4">
                             <h5 className="mb-0">Card details</h5>
                           </div>
-                          <p className="small mb-2">Card type</p>
-                          <a href="#!" type="submit" className="text-white">
-                            <i className="fab fa-cc-mastercard fa-2x me-2"></i>
-                          </a>
-                          <a href="#!" type="submit" className="text-white">
-                            <i className="fab fa-cc-visa fa-2x me-2"></i>
-                          </a>
-                          <a href="#!" type="submit" className="text-white">
-                            <i className="fab fa-cc-amex fa-2x me-2"></i>
-                          </a>
-                          <a href="#!" type="submit" className="text-white">
-                            <i className="fab fa-cc-paypal fa-2x"></i>
-                          </a>
+                          <div id="ccLogos d-flex">
+                            <p className="small mb-2">Card type</p>
+                            <img
+                              src="/assets/cc-logos.png"
+                              alt="card logos"
+                              className="img-fluid"
+                              style={{ maxWidth: "80%" }}
+                            />
+                          </div>
 
                           <form className="mt-4">
                             <div

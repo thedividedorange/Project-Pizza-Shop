@@ -46,3 +46,12 @@
 #cartPopup .col-lg-5 .card.text-white.rounded-3 {
   background-color: var(--color-surface-300);
 }
+
+#ccLogos {
+  width: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+  #cartPopup {
+  }
+}

@@ -145,7 +145,3 @@
     display: none;
   }
 }
-
-.bgChange {
-  background-blend-mode: luminosity;
-}

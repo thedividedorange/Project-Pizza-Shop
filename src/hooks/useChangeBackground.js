@@ -3,9 +3,9 @@ import { useEffect } from "react";
 export default function useBackgroundImage(location, bodyColor) {
   useEffect(() => {
     const backgroundPath = {
-      "/": "assets/home-bg.png",
-      "/pricing": "assets/home-bg.png",
-      "/order-now": "assets/home-bg.png",
+      "/": "assets/home-bg.webp",
+      "/pricing": "assets/bg-ing.webp",
+      "/order-now": "assets/bg-2.webp",
     };
     const path = backgroundPath[location.pathname] || "assets/home-bg.png";
 
