@@ -1,0 +1,51 @@
+.scroll {
+  white-space: nowrap;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #eaeaea;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  animation: scroll-animation 15s linear infinite;
+  -webkit-animation: scroll-animation 15s linear infinite;
+  -moz-animation: scroll-animation 15s linear infinite;
+}
+
+#scrollContainer {
+  background: linear-gradient(90deg, #111, #222);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.scroll:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@-webkit-keyframes scroll-animation {
+  from {
+    -webkit-transform: translateX(100vw);
+    transform: translateX(100vw);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-moz-keyframes scroll-animation {
+  from {
+    -moz-transform: translateX(100vw);
+    transform: translateX(100vw);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-animation {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,36 @@
+a.basket {
+  text-decoration: none;
+}
+
+.basket:hover {
+  transform: scale(1.2);
+  transition: transform 0.025s ease-in;
+}
+
+.basket:active {
+  transform: scale(0.99);
+  transition: transform 0.025s ease-in;
+}
+
+.basket .basketCount {
+  position: relative;
+  left: 25px;
+  top: -11px;
+  color: white;
+  z-index: 2;
+  list-style: none;
+
+  font-size: 12px;
+}
+
+.basket .basketCount::before {
+  content: "";
+  border-radius: 50px;
+  background-color: red;
+  width: 12.5px;
+  height: 12.5px;
+  position: absolute;
+  top: 4.5px;
+  left: -2.9px;
+  z-index: -1;
+}

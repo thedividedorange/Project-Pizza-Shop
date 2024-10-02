@@ -1,0 +1,8 @@
+.navRight > div {
+  gap: 1em;
+  padding: 8px 5px;
+}
+
+.navRight .cart {
+  padding-right: 7px;
+}

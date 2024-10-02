@@ -1,0 +1,9 @@
+button#login:hover {
+  transform: scale(1.015);
+  transition: transform 0.125s ease;
+}
+
+button#login:active {
+  transform: scale(0.97);
+  transition: transform 0.125s ease;
+}

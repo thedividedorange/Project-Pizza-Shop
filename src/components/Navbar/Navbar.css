@@ -1,3 +1,7 @@
+#pizzaNav {
+  background-color: #000000;
+}
+
 #pizzaNav > div {
   max-width: 1500px;
 }
@@ -23,22 +27,6 @@
   top: 6%;
   left: 11%;
   filter: drop-shadow(0px 2px 1px var(--color-surface-400));
-}
-
-#pizzaNav {
-  background-color: var(--color-surface-300);
-}
-
-#pizzaNav ul li {
-  filter: drop-shadow(0px 2px 4px var(--color-surface-100));
-  letter-spacing: 1.4px;
-}
-
-#pizzaNav ul li:hover {
-  background-color: var(--color-surface-200);
-  border-radius: 3px;
-  transition: background-color 0.2s ease-in;
-  cursor: pointer;
 }
 
 /* Open-Close Sign */
@@ -143,5 +131,24 @@
 @media only screen and (min-width: 1300px) {
   #shopStatText {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 1096px) {
+  #navDesktop,
+  .navRight {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1097px) {
+  #navMobile {
+    display: none;
+  }
+
+  .navMid .search,
+  .navMid .basket,
+  #scrollContainer {
+    display: none !important;
   }
 }
