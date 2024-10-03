@@ -1,0 +1,136 @@
+#HomeHeaderContainer {
+  padding-top: 1em;
+}
+
+#headerHome {
+  position: relative;
+  height: 600px;
+  z-index: 2;
+}
+
+.customerRatings {
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.customerRatings img {
+  width: 80px;
+  height: auto;
+}
+
+.homeTitle {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.homeTitle img {
+  width: 100px;
+  height: 100px;
+}
+
+.homeTitle h1 {
+  font-size: 2.6rem;
+}
+
+.homeIntro {
+  padding-top: 30px;
+}
+
+.homeIntro p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+#introButtonsWrapper {
+  padding-top: 30px;
+}
+
+.introButtons .getYourPizza,
+.introButtons .discover {
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  text-wrap: nowrap;
+}
+
+.introButtons .discover img {
+  width: 26px;
+  height: 26px;
+}
+
+#headerHome::after {
+  content: "";
+  background: url("../../../public/assets/pizza-hero-section1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1000px;
+  height: 700px;
+  position: absolute;
+  right: -270px;
+  top: -50px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 768px) {
+  #headerHome::after {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .customerRatings {
+    justify-content: flex-start;
+  }
+
+  .homeTitle {
+    text-align: left;
+    max-width: 600px;
+  }
+
+  .homeTitle h1 {
+    font-size: 3.8rem;
+  }
+
+  .homeIntro p {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  #headerHome {
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  #headerHome::after {
+    width: 1000px;
+    height: 700px;
+    background-size: contain;
+    top: 60px;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .customerRatings {
+    font-size: 1rem;
+  }
+
+  .homeIntro p {
+    max-width: 550px;
+  }
+
+  .introButtons .getYourPizza,
+  .introButtons .discover {
+    width: 100%;
+    font-size: 1.2rem;
+    text-wrap: nowrap;
+  }
+
+  .introButtons .discover {
+    background: none;
+    border: none;
+  }
+  #headerHome {
+    overflow: revert;
+  }
+}

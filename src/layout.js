@@ -6,10 +6,10 @@ import Footer from "./components/Footer/Footer";
 import Floater from "components/Floater/Floater";
 
 const PageLayout = () => {
-  const location = useLocation();
-  const bodyColor = useRef(null);
+  // const location = useLocation();
+  // const bodyColor = useRef(null);
 
-  useBackgroundImage(location, bodyColor);
+  // useBackgroundImage(location, bodyColor);
 
   return (
     <>
@@ -17,7 +17,7 @@ const PageLayout = () => {
       <div
         id="mainContainer"
         className="container-fluid d-flex flex-column min-vh-100 px-0 bg-black"
-        ref={bodyColor}
+        // ref={bodyColor}
       >
         <Floater />
         <Outlet />
