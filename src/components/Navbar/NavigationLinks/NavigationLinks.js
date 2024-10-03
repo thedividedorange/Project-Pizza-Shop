@@ -20,7 +20,7 @@ export default function NavigationLinks() {
     <>
       <ul
         id="navDesktop"
-        className=" d-flex flex-row text-light list-unstyled gap-3 mb-0 fs-5"
+        className=" d-flex flex-row text-light list-unstyled gap-3 mb-0 fs-6"
       >
         <li className="p-2 flex-grow-1 flex-shrink-1">
           <Link
