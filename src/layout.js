@@ -1,23 +1,17 @@
-import { React, useRef } from "react";
-import { Outlet, useLocation } from "react-router-dom";
-import useBackgroundImage from "hooks/useChangeBackground";
+import { React } from "react";
+import { Outlet } from "react-router-dom";
+
 import Navbar from "components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Floater from "components/Floater/Floater";
 
 const PageLayout = () => {
-  // const location = useLocation();
-  // const bodyColor = useRef(null);
-
-  // useBackgroundImage(location, bodyColor);
-
   return (
     <>
       <Navbar />
       <div
         id="mainContainer"
         className="container-fluid d-flex flex-column min-vh-100 px-0 bg-black"
-        // ref={bodyColor}
       >
         <Floater />
         <Outlet />
