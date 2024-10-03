@@ -3,7 +3,7 @@ import "./Search.css";
 
 export default function Search() {
   return (
-    <a className="search" href="#">
+    <a className="search" href="/">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"

@@ -3,7 +3,7 @@ import "./Basket.css";
 
 export default function Basket() {
   return (
-    <a className="basket" href="">
+    <a className="basket" href="/">
       <span className="basketCount">4</span>
       <svg
         style={{ fill: "#FFFFFF" }}
