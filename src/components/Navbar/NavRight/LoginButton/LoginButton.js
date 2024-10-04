@@ -6,7 +6,7 @@ import "./LoginButton.css";
 export default function LoginButton(props) {
   return (
     <Button
-      btnId="login"
+      btnID="login"
       btnClass="btn btn-danger d-flex rounded-pill gap-2 px-4"
     >
       <svg

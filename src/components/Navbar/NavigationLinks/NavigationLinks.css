@@ -33,22 +33,28 @@ button#burger:active {
 }
 
 .dropdown-menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 120%;
   width: 100vw;
   right: -28px;
   border: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
 .dropdown-menu.show {
-  display: flex;
-  flex-direction: column;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .dropdown-item {
   opacity: 0;
-  transform: translateY(-30px);
+  transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   margin-bottom: -1px;
   padding-left: 3em;
@@ -56,7 +62,10 @@ button#burger:active {
   padding-bottom: 1em;
   padding-top: 0;
 }
-
+.dropdown-menu.show .dropdown-item {
+  opacity: 1;
+  transform: translateY(20px);
+}
 .dropdown-menu li:first-child {
   padding-top: 1em;
 }
@@ -69,7 +78,7 @@ button#burger:active {
   transform: skewY(2deg) scale(1.1);
   font-size: 1.6rem;
   color: #dc3545 !important;
-  transition: transform 0.3s ease, font-size 0.2s ease;
+  transition: transform 0.3s ease, font-size 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-menu li a:active {

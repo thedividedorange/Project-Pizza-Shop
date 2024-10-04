@@ -1,111 +1,80 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import Button from "components/Button/Button";
+import PizzaData from "data/PizzaData";
 
 import "./Ads.css";
 
-export default function Ads() {
-  const navigate = useNavigate();
+function MenuCards({ itemNames }) {
+  const pizzas = PizzaData;
+  const pizzasNames = itemNames.split(",").map((item) => item.trimStart());
 
   return (
-    <section id="ads" className="container-fluid text-center py-5">
-      <div className="container">
-        <div className="row g-3">
-          <div className="col-12 col-md-6">
-            <div
-              className="adsWrapperLeft rounded p-3 h-100"
+    <>
+      {pizzas
+        .filter((pizza) => pizzasNames.includes(pizza.name))
+        .map((item) => (
+          <div
+            className="card"
+            style={{
+              width: "22rem",
+              height: "35rem",
+              borderRadius: "18px",
+              padding: "6px",
+              backgroundColor: "#2B2B2B",
+            }}
+          >
+            <img
+              src={item.photoName}
+              alt=""
               style={{
-                background:
-                  'url("/assets/adbar-BG-right.png") no-repeat fixed center',
-                backgroundSize: "cover",
+                borderTopLeftRadius: "18px",
+                borderTopRightRadius: "18px",
+                objectFit: "cover",
+                height: "50%",
+                width: "100%",
               }}
-            >
-              <div className="row h-100">
-                <div className="col-md-8 order-2 order-md-1">
-                  <div className="d-flex flex-column align-items-center align-items-md-end justify-content-evenly">
-                    <h2 className="fs-2 text-white">SPECIAL OFFERS</h2>
-                    <p className="text-white text-md-end">
-                      To find out about the latest special offers, sign up for
-                      our newsletter.
-                    </p>
-                    <form
-                      className="row needs-validation"
-                      noValidate
-                      style={{ margin: "0" }}
-                    >
-                      <div className="col d-flex">
-                        <input
-                          type="email"
-                          className="form-control"
-                          id="exampleFormControlInput1"
-                          placeholder="name@example.com"
-                          required
-                          style={{
-                            width: "100%",
-                            maxWidth: "250px",
-                          }}
-                        />
-                        <div className="invalid-feedback">
-                          Please enter a valid Email.
-                        </div>
-                        <Button
-                          btnClass={`btn btn-dark btn-lg btn-outline-secondary text-white ms-1`}
-                          btnType="submit"
-                          btnStyle={{ maxWidth: "20em" }}
-                        >
-                          GO!
-                        </Button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="col-md-4 d-flex align-items-center justify-content-center order-1 order-md-2">
-                  <img
-                    src="assets/delicious-italian-pizza.png"
-                    alt="pizza art"
-                    className="img-fluid mb-4"
-                    style={{ minWidth: "120px", width: "100%" }}
-                  />
-                </div>
-              </div>
+            />
+            <div className="card-body text-center d-flex flex-column">
+              <h3 className="card-title text-white fs-2 font-bold mb-1">
+                {item.name}
+              </h3>
+              <span
+                className="menu-ratings mb-4"
+                style={{ fontSize: "1.5rem" }}
+              >
+                ⭐⭐⭐⭐⭐
+              </span>
+              <p
+                class="card-text text-white mb-5"
+                style={{ fontSize: "0.9rem" }}
+              >
+                {item.ingredients}
+              </p>
+              <p className="menu-price text-white fs-2">${item.price}</p>
             </div>
           </div>
-          <div className="col-12 col-md-6">
-            <div
-              className="adsWrapperRight rounded p-3 h-100"
-              style={{
-                background:
-                  'url("/assets/adbar-BG-right.png") no-repeat fixed center',
-                backgroundSize: "cover",
-              }}
-            >
-              <div className="row h-100">
-                <div className="col-md-4 d-flex align-items-center justify-content-center order-1">
-                  <img
-                    src="assets/slicePizza.png"
-                    alt="pizza art"
-                    className="img-fluid mb-4"
-                    style={{ minWidth: "120px", width: "100%" }}
-                  />
-                </div>
-                <div className="col-md-8 order-2">
-                  <div className="d-flex flex-column align-items-center align-items-md-start justify-content-evenly">
-                    <h2 className="fs-2 text-white">ORDER ONLINE</h2>
-                    <p className="text-white text-md-start">
-                      Now it's even easier to get your hands on the very best
-                      Pizza in all of Dublin.
-                    </p>
-                    <Button
-                      btnClass={`btn btn-dark btn-lg btn-outline-secondary text-white`}
-                      btnType="button"
-                      btnStyle={{ maxWidth: "20em" }}
-                      btnOnClick={() => navigate("/order-now")}
-                    >
-                      ORDER NOW
-                    </Button>
-                  </div>
-                </div>
-              </div>
+        ))}
+    </>
+  );
+}
+
+export default function Ads() {
+  return (
+    <section id="popularDishes" className="container-fluid mb-5">
+      <div className="container-xl">
+        <div className="row">
+          <div className="col pb-3">
+            <h2>Popular Dishes</h2>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col pb-3">
+            <h5 style={{ fontSize: "1.2rem" }}>Menu Cards</h5>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="d-flex flex-wrap gap-4 gap-lg-5 justify-content-center justify-content-lg-evenly">
+              <MenuCards itemNames={"Margherita, Spinaci, Funghi"} />
             </div>
           </div>
         </div>

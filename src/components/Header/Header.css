@@ -1,10 +1,7 @@
-#HomeHeaderContainer {
-  padding-top: 1em;
-}
-
 #headerHome {
   position: relative;
   height: 600px;
+  padding-top: 1em;
   z-index: 2;
 }
 
@@ -52,11 +49,26 @@
   padding: 12px;
   font-size: 1.2rem;
   text-wrap: nowrap;
+  overflow: hidden;
 }
 
 .introButtons .discover img {
   width: 26px;
   height: 26px;
+  transform: translateX(0);
+}
+
+.introButtons .discover:hover img {
+  animation: moveOut 0.5s ease-out;
+}
+
+@keyframes moveOut {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
 }
 
 #headerHome::after {
@@ -70,13 +82,35 @@
   right: -270px;
   top: -50px;
   z-index: -1;
+  animation: float 4s infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
 }
 
 @media only screen and (max-width: 768px) {
   #headerHome::after {
     display: none;
+    height: 500px;
+  }
+
+  header:has(#headerHome) {
+    height: 500px;
   }
 }
+
 @media only screen and (min-width: 769px) {
   .customerRatings {
     justify-content: flex-start;
@@ -130,6 +164,7 @@
     background: none;
     border: none;
   }
+
   #headerHome {
     overflow: revert;
   }

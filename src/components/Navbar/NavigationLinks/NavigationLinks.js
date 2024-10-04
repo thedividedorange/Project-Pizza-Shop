@@ -128,11 +128,6 @@ export default function NavigationLinks() {
               <li
                 key={index}
                 className="dropdown-item d-flex flex-column gap-2 bg-black"
-                style={{
-                  transformOrigin: "top-center",
-                  animation: "rotateX 300ms ease-in-out forwards",
-                  animationDelay: `${index * 100}ms`,
-                }}
               >
                 {navEnd}
               </li>

@@ -1,9 +1,29 @@
-button#login:hover {
-  transform: scale(1.015);
+button#login {
+  overflow: hidden;
   transition: transform 0.125s ease;
+}
+
+button#login svg {
+  transform: translateX(0);
+}
+
+button#login:hover {
+  transform: scale(1.04);
+}
+
+button#login:hover svg {
+  animation: move 0.5s ease-in-out forwards;
 }
 
 button#login:active {
   transform: scale(0.97);
-  transition: transform 0.125s ease;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
