@@ -9,22 +9,21 @@ export default function Promo() {
 
   return (
     <section id="promo" className="container-fluid">
-      <div className="container py-5 px-2">
-        <div className="row justify-content-center">
-          <div className="col-md-6">
-            <div id="promoBox" className="p-4 text-center">
-              <h2>DARE TO BE DIFFERENT!</h2>
-              <Button
-                btnClass={
-                  "btn btn-dark btn-lg btn-outline-secondary text-white w-full"
-                }
-                btnType="button"
-                btnOnClick={() => navigate("/order-now")}
-              >
-                ORDER ONLINE NOW
-              </Button>
-            </div>
-          </div>
+      <div className="container-xl">
+        <div className="row">
+          <div className="col"></div>
+          <div className="col"></div>
+          <div className="col"></div>
+        </div>
+        <div className="row">
+          <div className="col"></div>
+          <div className="col"></div>
+          <div className="col"></div>
+        </div>
+        <div className="row">
+          <div className="col"></div>
+          <div className="col"></div>
+          <div className="col"></div>
         </div>
       </div>
     </section>

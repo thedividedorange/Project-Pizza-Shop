@@ -59,7 +59,11 @@ function MenuCards({ itemNames }) {
 
 export default function Ads() {
   return (
-    <section id="popularDishes" className="container-fluid mb-5">
+    <section
+      id="popularDishes"
+      className="container-fluid"
+      style={{ marginBottom: "8em" }}
+    >
       <div className="container-xl">
         <div className="row">
           <div className="col pb-3">

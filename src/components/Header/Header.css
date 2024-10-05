@@ -108,6 +108,7 @@
 
   header:has(#headerHome) {
     height: 500px;
+    margin-bottom: 1em;
   }
 }
 
@@ -128,10 +129,6 @@
   .homeIntro p {
     text-align: left;
     font-size: 1.2rem;
-  }
-
-  #headerHome {
-    overflow: hidden;
   }
 }
 
@@ -163,9 +160,5 @@
   .introButtons .discover {
     background: none;
     border: none;
-  }
-
-  #headerHome {
-    overflow: revert;
   }
 }
